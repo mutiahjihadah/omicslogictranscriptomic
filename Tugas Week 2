@@ -1,0 +1,16 @@
+Dinamika Transkrip pada Tahap Progresi Penyakit Tuberkulosis Pasca Infeksi Mycobacterium tuberculosis pada Manusia
+
+1.)	Pendahuluan
+Pengendalian tuberculosis (TBC) dapat dilakukan dengan efektif jika disokong dengan alat diagnostik yang akurat dan mampu menjangkau semua kalangan. Global Plan to End TB 2030 World Health Organization (WHO) secara spesifik menyebutkan bahwa urgensi menemukan biomarker dan memproduksi alat diagnostik yang mampu mendeteksi TB dari specimen non-sputum (dahak) semakin meningkat. Pada 2023, Wolfgang Sadee dan tim meneliti variabilitas inter-individu dari ekspresi gen sebagai respon dari pendedahan makrofaga alveolar manusia pada Mycobacterium tuberculosis (Mtb). Secara teoretis, respon manusia terhadap infeksi Mtb sangat beragam, mulai dari early clearance, dormansi (dahulu dikenal sebagai TBC laten), subklinikal, hingga TBC aktif. Mtb adalah pathogen yang diteorikan berevolusi bersama tubuh manusia, maka dari itu, adaptasi fenotipik Mtb sangat dipengaruhi factor genetik dan lingkungan dari inang. Tujuan dari analisis ini adalah untuk mempelajari gen yang diekspresikan secara signifikan pada berbagai kondisi dan respon tubuh inang (pasien) terhadap infeksi Mtb pada sel makrofaga alveolar yang termasuk lokasi awal pendedahan Mtb.
+
+2.) Metode (dataset yang digunakan, pembagian grup, parameter utama GEO2R, dan skema replikasi)
+Dataset yang digunakan memiliki geo accession number: GSE189996. Adapun tampilan dari landing page series ini adalah sebagai berikut.
+ 
+Gambar 1. Tampilan Landing Page Berisi Deskripsi GSE189996
+
+
+Source: 
+Sadee, W., Cheeseman, I. H., Papp, A., Pietrzak, M., Seweryn, M., Zhou, X., ... & Schlesinger, L. S. (2025). Human alveolar macrophage response to Mycobacterium tuberculosis: immune characteristics underlying large inter-individual variability. Communications biology, 8(1), 950.
+
+3.) Hasil dan Interpretasi (ringkasan output DEG + interpretasi biologis)
+4.) Kesimpulan
