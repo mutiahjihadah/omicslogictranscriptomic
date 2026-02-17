@@ -1,0 +1,245 @@
+#Memanggil semua library
+```{r}
+library(GEOquery)
+library(limma)
+library(pheatmap)
+library(ggplot2)
+library(dplyr)
+library(illuminaHumanv4.db)
+library(AnnotationDbi)
+library(umap)
+```
+#Mengambil data dari GEO
+```{r}
+gset <- getGEO("GSE48018", GSEMatrix = TRUE, AnnotGPL = TRUE)[[1]] 
+```
+
+#Preprocessing data ekspresi
+#Stage 1. Mengambil data ekspresi dari gset (exprs())
+#Stage 2. Konversi data yang rentang nilai sangat besar menjadi quantile & mengubah format menjadi vektor numerik
+#Stage 3. Log transformasi
+#Stage 4. Definisikan kelompok sampel
+```{r}
+ex <- exprs(gset) 
+qx <- as.numeric(quantile(ex, c(0, 0.25, 0.5, 0.75, 0.99, 1), na.rm = TRUE)) 
+LogTransform <- (qx[5] > 100) || (qx[6] - qx[1] > 50 && qx[2] > 0)
+#IF statement: 
+#Jika LogTransform = TRUE, maka lakukan log2 
+if (LogTransform) { 
+# Nilai <= 0 tidak boleh di-log, maka diubah menjadi NA 
+ex[ex <= 0] <- NA 
+ex <- log2(ex) 
+} 
+#pData(): metadata sampel 
+#Kita mengambil kolom ‘treatment:ch1’ yang berisi info vaksin vs  baseline 
+group_info <- pData(gset)[["treatment:ch1"]] 
+#make.names(): mengubah teks menjadi format valid untuk R 
+groups <- make.names(group_info)
+#factor(): 
+#Mengubah data kategorik menjadi faktor 
+#Faktor sangat penting untuk analisis statistik di R 
+gset$group <- factor(groups) 
+#levels(): melihat kategori unik dalam faktor 
+nama_grup <- levels(gset$group) 
+print(nama_grup) 
+#Harusnya muncul: “baseline” dan “trivalent.influenza.vaccination” 
+```
+#Yay, muncul
+#Selanjutnya, membuat matrix desain model linear. Kalau bisa gaada intercept untuk limma
+#Kasih nama kolom, lalu namai perbandingan biologis (grup vaksin untuk yang trivalent, influenza vaccination, baseline buat yang baseline)
+```{r}
+design <- model.matrix((~0 + gset$group))
+colnames(design) <-levels(gset$group)
+grup_vaksin <-"trivalent.influenza.vaccination"
+grup_baseline <- "baseline"
+contrast_formula <- paste (grup_vaksin, "-", grup_baseline)
+print(paste("Kontras yang dianalisis:", contrast_formula))
+```
+#Analisis LIMMA
+#Step1. Bikin model linear setiap gen
+#Step2. Mendefinisikan perbandingan antargrup dengan contrast matrix, setelah didefinisikan diapply ke matrix yang tadi dibikin pakai contrasts fit
+#Step 3. Stabilkan estimasi varian dengan empirical bayes/ eBayes(). Disini function fit2 ditimpa saja, toh yang dipake yang normalisasi
+#Step 4. Tampilkan urutan DEG di tabel dengan function topTable(). Ingat2 kalau pvalue yang dipakai tergantung penelitian. Untuk vaksin 0.05
+```{r}
+fit <- lmFit(ex, design)
+contrast_matrix <- makeContrasts(contrasts = contrast_formula, levels = design)
+fit2<- contrasts.fit(fit, contrast_matrix)
+fit2 <- eBayes(fit2)
+topTableResults <- topTable( 
+fit2, 
+adjust = "fdr", 
+sort.by = "B", 
+number = Inf, 
+p.value = 0.05 
+) 
+head(topTableResults)
+
+```
+#Anotasi Nama Gen, karena di data microarray cuma ada probe id. Anotasi bisa dilakukan di illuminaHumanv4.db. Langkahnya adalah SBB
+# Step1. Ambil ID probe dari hasil DEG pakai func rownames
+# Step2. Mencocokkan ID probe dengan anotasi di illuminaHumanv4.db
+#Step3. Gabungkan ID probe, anotasi, dan hasil limma
+#Step 4. Cek hasil anotasi, berdasarkan DEG teratas
+```{r}
+probe_ids <-rownames(topTableResults)
+gene_annotation <- AnnotationDbi::select(
+  illuminaHumanv4.db,
+  keys = probe_ids , 
+  columns = c("SYMBOL", "GENENAME"),
+  keytype = "PROBEID"
+)
+topTableResults$PROBEID <- rownames((topTableResults))
+topTableResults <-merge(
+  topTableResults,
+  gene_annotation,
+  by = "PROBEID",
+  all.x= TRUE
+)
+head(topTableResults[, c("PROBEID", "SYMBOL", "GENENAME")])
+```
+#VISUALISASI
+#I. BOXPLOT DISTRIBUSI NILAI EKSPRESI (untuk melihat distribusi, batch effect, dan kewajaran normalisasi/ log-transform)
+#1. Set vakue sebagai numeric
+#2. Set konten boxplot. Sumber data ex, definisi kolom, x y axis
+#3. Bikin legenda
+```{r}
+group_colors <- as.numeric(gset$group)
+boxplot(
+  ex,
+  col = group_colors,
+  las = 2,
+  outline = FALSE,
+  main = "Boxplot Distribusi Nilai Ekspresi per Sampel", 
+ylab = "Expression Value (log2)" 
+)
+legend(
+  "topright",
+  legend= levels(gset$group),
+  fill = unique(group_colors),
+  cex = 0.8
+)
+```
+#B. DENSITY PLOT UNTUK DISTRIBUSI NILAI EKSPRESI ANTAR GRUP, BUKAN ANTAR SAMPEL
+# 1. Jadikan data sebagai vektor
+#2. Gabungkan ekspresi & grup ke df
+#3. Bikin density plot pakai ggplot
+```{r}
+expr_long <-data.frame(
+  Expression = as.vector(ex),
+  Group = rep(gset$group, each= nrow(ex))
+)
+ggplot(expr_long, aes(x = Expression, color = Group)) + 
+geom_density(linewidth = 1) + 
+theme_minimal() + 
+labs( 
+title = "Distribusi Nilai Ekspresi Gen (Vaksin Flu)", 
+x = "Expression Value (log2)", 
+y = "Density"
+)
+
+```
+#III. UMAP (CLUSTER, VISUALISASI DIMENSI RENDAH)
+#Mereduksi ribuan gen jadi 2 dimensi (maksudnya ini perbandingan nilai log 1 ke log 2)
+#1. Transpose matriks ekspresi
+#2. Run UMAP sebagai umap result dari umap input
+#3. Simpan hasil ke df
+#4. Plot UMAP pakai ggplot dengan UMAP1 jadi x dan UMAP2 jadi y
+```{r}
+umap_input <- t(ex)
+umap_result <-umap(umap_input)
+umap_df <- data.frame(
+  UMAP1= umap_result$layout[,1],
+  UMAP2= umap_result$layout[,2],
+  Group= gset$group
+)
+ggplot(umap_df, aes(x = UMAP1, y = UMAP2, color = Group)) + 
+geom_point(size = 3, alpha = 0.8) + 
+theme_minimal() + 
+labs( 
+title = "UMAP Plot: Baseline vs Vaccinated", 
+x = "UMAP 1", 
+y = "UMAP 2" 
+)
+```
+#IV. VISUALISASI VOLCANO PLOT UNTUK DISTRIBUSI UPREGULATED AND DOWNREGULATED
+#1. Bikin input data volcano plot yang berasal dari tabel DEG (topTableresults), fungsi logFC, inputkan adjusted p value, dan gennya adalah SYMBOL dari tabel DEG
+#2. Klasifikasi up/downregulated. kalau adj pval >0.05 maka up, sebaliknya down. dibuat di 2 function yang berbeda
+#3. Visualisasi dengan ggplot, x logFC dan y -log10 dari adj pval
+```{r}
+volcano_data <- data.frame( 
+logFC = topTableResults$logFC, 
+adj.P.Val = topTableResults$adj.P.Val, 
+Gene = topTableResults$SYMBOL 
+) 
+#Klasifikasi status gen 
+volcano_data$status <- "NO" 
+volcano_data$status[volcano_data$logFC > 0.1 & volcano_data$adj.P.Val 
+< 0.05] <- "UP" 
+volcano_data$status[volcano_data$logFC < -0.1 & volcano_data$adj.P.Val 
+< 0.05] <- "DOWN"
+ggplot(volcano_data, aes(x = logFC, y = -log10(adj.P.Val), color = 
+status)) + 
+geom_point(alpha = 0.6) + 
+scale_color_manual(values = c("DOWN" = "blue", "NO" = "grey", "UP" = 
+"red")) + 
+geom_vline(xintercept = c(-0.1, 0.1), linetype = "dashed") + 
+geom_hline(yintercept = -log10(0.05), linetype = "dashed") + 
+theme_minimal() + 
+ggtitle("Volcano Plot DEG Vaksin Flu") 
+```
+#VI. HEATMAP
+#1. Pilih 50 gen paling signifikan, pakai fungsi head di tabel DEG dengan jumlah 50
+#2. Ambil matriks ekspresi untuk gen terpilih sebagai df heatmap
+#3. genesymbol dan genelabel
+#4. Bersihkan data BIAR TIDAK ERROR: hapus row dengan NA, hapus gen dengan varian 0
+#5. Anotasi Kolom
+#6. Bikin visualisasi pakai pheatmap
+```{r}
+topTableResults <- topTableResults[ 
+order(topTableResults$adj.P.Val), 
+] 
+top50 <- head(topTableResults, 50)
+
+mat_heatmap <- ex[top50$PROBEID, ] 
+
+#Gunakan Gene Symbol (fallback ke Probe ID) 
+gene_label <- ifelse( 
+is.na(top50$SYMBOL) | top50$SYMBOL == "", 
+top50$PROBEID,     
+top50$SYMBOL        
+)  
+rownames(mat_heatmap) <- gene_label
+
+mat_heatmap <- mat_heatmap[ 
+rowSums(is.na(mat_heatmap)) == 0, 
+]
+
+gene_variance <- apply(mat_heatmap, 1, var) 
+mat_heatmap <- mat_heatmap[gene_variance > 0, ]
+
+annotation_col <- data.frame( 
+Group = gset$group 
+) 
+rownames(annotation_col) <- colnames(mat_heatmap) 
+pheatmap( 
+mat_heatmap, 
+scale = "row",                 
+# Z-score per gen 
+annotation_col = annotation_col, 
+show_colnames = FALSE,         
+# nama sampel dimatikan 
+show_rownames = TRUE, 
+fontsize_row = 7,
+clustering_distance_rows = "euclidean", 
+clustering_distance_cols = "euclidean", 
+clustering_method = "complete", 
+main = "Top 50 Differentially Expressed Genes" 
+)
+```
+#LAST, SIMPAN HASIL!!!
+```{r}
+write.csv(topTableResults, "Hasil_GSE48018_DEG.csv")
+message("Analisis selesai. File hasil telah disimpan.")
+```
+
+
