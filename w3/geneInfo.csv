@@ -1,0 +1,107 @@
+"Pasted","Symbol","Ensembl Gene ID","Entrez","Type","Species","Chr","Position (Mbp)","Description","percentage_gc_content","transcript_count","genomeSpan","cds_length","transcript_length","FiveUTR","ThreeUTR","nExons"
+"FCGR1BP"," FCGR1BP","ENSG00000291135",2210,"lncRNA","Human","1",121.042602,"Fc gamma receptor Ib, pseudogene ",41.27,44,60508,NA,1135,NA,NA,5
+"ARID1A"," ARID1A","ENSG00000117713",8289,"protein_coding","Human","1",26.693236,"AT-rich interaction domain 1A ",46.19,16,88869,3493,4030,420,835,15
+"PUM1"," PUM1","ENSG00000134644",9698,"protein_coding","Human","1",30.931506,"Pumilio RNA binding family member 1 ",41.05,23,134486,1759,2427,59,633,17
+"GBP1"," GBP1","ENSG00000117228",2633,"protein_coding","Human","1",89.051882,"Guanylate binding protein 1 ",37.94,9,13479,1335,1898,72,698,8
+"GBP2"," GBP2","ENSG00000162645",2634,"protein_coding","Human","1",89.106132,"Guanylate binding protein 2 ",38,4,44325,1776,3579,157,1039,11
+"GBP4"," GBP4","ENSG00000162654",115361,"protein_coding","Human","1",89.181144,"Guanylate binding protein 4 ",38.84,3,17799,1923,3930,108,4110,8
+"GBP5"," GBP5","ENSG00000154451",115362,"protein_coding","Human","1",89.256189,"Guanylate binding protein 5 ",37.31,5,16672,1672,4844,1056,4515,8
+"FCGR1A"," FCGR1A","ENSG00000150337",2209,"protein_coding","Human","1",149.782671,"Fc gamma receptor Ia ",42.01,4,9005,964,985,59,158,4
+"CD46"," CD46","ENSG00000117335",4179,"protein_coding","Human","1",207.752037,"CD46 molecule ",38.24,33,43477,1036,3087,153,1144,10
+"RAB10"," RAB10","ENSG00000084733",10890,"protein_coding","Human","2",26.034084,"RAB10, member RAS oncogene family ",40.63,4,103371,603,2188,525,2433,6
+"PPM1B"," PPM1B","ENSG00000138032",5495,"protein_coding","Human","2",44.167969,"Protein phosphatase, Mg2+/Mn2+ dependent 1B ",38.72,11,76416,1075,2239,206,1320,5
+"PLEK"," PLEK","ENSG00000115956",5341,"protein_coding","Human","2",68.365282,"Pleckstrin ",41.17,2,32172,1053,2256,70,1637,7
+"UBXN4"," UBXN4","ENSG00000144224",23190,"protein_coding","Human","2",135.741734,"UBX domain protein 4 ",39.75,8,43323,537,1424,107,706,8
+"IFIH1"," IFIH1","ENSG00000115267",64135,"protein_coding","Human","2",162.267074,"Interferon induced with helicase C domain 1 ",35.75,8,51611,1315,3220,323,184,15
+"DHRS9"," DHRS9","ENSG00000073737",10170,"protein_coding","Human","2",169.064789,"Dehydrogenase/reductase 9 ",39.63,9,31379,872,1749,158,399,6
+"STAT1"," STAT1","ENSG00000115415",6772,"protein_coding","Human","2",190.90846,"Signal transducer and activator of transcription 1 ",38.26,41,112501,1211,3495,107,488,22
+"CAVIN2"," CAVIN2","ENSG00000168497",8436,"protein_coding","Human","2",191.83431,"Caveolae associated protein 2 ",40.74,1,12779,1278,3054,163,1613,2
+"WDFY1"," WDFY1","ENSG00000085449",57590,"protein_coding","Human","2",223.855716,"WD repeat and FYVE domain containing 1 ",42.71,6,89642,998,1927,60,3323,7
+"DOCK10"," DOCK10","ENSG00000135905",55619,"protein_coding","Human","2",224.76509,"Dedicator of cytokinesis 10 ",39.37,18,277379,1753,5987,50,181,45
+"SNRK"," SNRK","ENSG00000163788",54861,"protein_coding","Human","3",43.286512,"SNF related kinase ",41.92,8,138253,2168,3288,95,1355,6
+"ARHGEF3"," ARHGEF3","ENSG00000163947",50650,"protein_coding","Human","3",56.727418,"Rho guanine nucleotide exchange factor 3 ",43.62,15,351912,867,1753,148,704,9
+"PARP9"," PARP9","ENSG00000138496",83666,"protein_coding","Human","3",122.527924,"Poly(ADP-ribose) polymerase family member 9 ",42.46,8,36654,2006,3158,112,1065,10
+"PARP14"," PARP14","ENSG00000173193",54625,"protein_coding","Human","3",122.680839,"Poly(ADP-ribose) polymerase family member 14 ",40.87,7,50002,2137,5392,27,861,13
+"XRN1"," XRN1","ENSG00000114127",54464,"protein_coding","Human","3",142.306607,"5'-3' exoribonuclease 1 ",36.98,14,141456,1692,2821,77,1534,27
+"SCARB2"," SCARB2","ENSG00000138760",950,"protein_coding","Human","4",76.158737,"Scavenger receptor class B member 2 ",41.79,28,75800,819,3239,203,1074,10
+"HERC5"," HERC5","ENSG00000138646",51191,"protein_coding","Human","4",88.457119,"HECT and RLD domain containing E3 ubiquitin protein ligase 5 ",39.4,5,49045,2454,2492,96,204,16
+"USP38"," USP38","ENSG00000170185",84640,"protein_coding","Human","4",143.184917,"Ubiquitin specific peptidase 38 ",35.42,9,40296,1636,5265,427,1395,9
+"FYB1"," FYB1","ENSG00000082074",2533,"protein_coding","Human","5",39.105252,"FYN binding protein 1 ",37.96,14,169277,995,1907,101,1098,14
+"RASA1"," RASA1","ENSG00000145715",5921,"protein_coding","Human","5",87.267883,"RAS p21 protein activator 1 ",35.77,6,124049,2128,4228,396,363,25
+"C5ORF15"," C5orf15","ENSG00000113583",56951,"protein_coding","Human","5",133.95551,"Chromosome 5 open reading frame 15 ",39.76,3,13165,798,1537,41,1349,3
+"E2F3"," E2F3","ENSG00000112242",1871,"protein_coding","Human","6",20.401879,"E2F transcription factor 3 ",42.72,2,91836,1202,4730,245,3284,7
+"MICB"," MICB","ENSG00000204516",4277,"protein_coding","Human","6",31.494881,"MHC class I polypeptide-related sequence B ",49.6,4,16244,1075,2258,75,1215,6
+"TAP2"," TAP2","ENSG00000204267",6891,"protein_coding","Human","6",32.821833,"Transporter 2, ATP binding cassette subfamily B member ",43.79,9,16907,2024,4648,58,2598,12
+"TAP1"," TAP1","ENSG00000168394",6890,"protein_coding","Human","6",32.845209,"Transporter 1, ATP binding cassette subfamily B member ",50.42,11,8608,1305,2388,70,267,10
+"HLA-DMB"," HLA-DMB","ENSG00000242574",3109,"protein_coding","Human","6",32.934629,"Major histocompatibility complex, class II, DM beta ",45.12,6,6400,552,1514,221,339,4
+"PRDM1"," PRDM1","ENSG00000057657",639,"protein_coding","Human","6",105.993463,"PR/SET domain 1 ",40.37,10,116477,1972,3405,155,1753,6
+"SAMD9"," SAMD9","ENSG00000205413",54809,"protein_coding","Human","7",93.099513,"Sterile alpha motif domain containing 9 ",37.75,3,18511,4507,5977,72,1812,2
+"GIMAP4"," GIMAP4","ENSG00000133574",55303,"protein_coding","Human","7",150.567369,"GTPase, IMAP family member 4 ",44.07,5,6585,825,1239,41,674,3
+"POLB"," POLB","ENSG00000070501",5423,"protein_coding","Human","8",42.338454,"DNA polymerase beta ",40.44,17,33355,309,808,92,90,10
+"WWP1"," WWP1","ENSG00000123124",11059,"protein_coding","Human","8",86.342547,"WW domain containing E3 ubiquitin protein ligase 1 ",37.52,11,135874,2108,2345,108,1049,16
+"OXR1"," OXR1","ENSG00000164830",55074,"protein_coding","Human","8",106.270144,"Oxidation resistance 1 ",36.67,19,482551,1154,2243,155,818,11
+"EFR3A"," EFR3A","ENSG00000132294",23167,"protein_coding","Human","8",131.904093,"EFR3 homolog A ",35.32,8,109550,1466,2739,123,2747,18
+"ZFAND5"," ZFAND5","ENSG00000107372",7763,"protein_coding","Human","9",72.351413,"Zinc finger AN1-type containing 5 ",39.89,8,13823,641,3136,155,2633,6
+"TDRD7"," TDRD7","ENSG00000196116",23424,"protein_coding","Human","9",97.412096,"Tudor domain containing 7 ",38.85,2,84030,3297,3089,74,242,15
+"JMJD1C"," JMJD1C","ENSG00000171988",221037,"protein_coding","Human","10",63.167221,"Jumonji domain containing 1C ",38.11,11,354630,6399,4895,247,656,18
+"IFIT2"," IFIT2","ENSG00000119922",3433,"protein_coding","Human","10",89.283694,"Interferon induced protein with tetratricopeptide repeats 2 ",42.26,15,25578,1267,2676,138,1470,3
+"MYOF"," MYOF","ENSG00000138119",26509,"protein_coding","Human","10",93.306429,"Myoferlin ",44.36,9,175906,3561,3672,132,270,41
+"SHTN1"," SHTN1","ENSG00000187164",57698,"protein_coding","Human","10",116.881477,"Shootin 1 ",39.09,7,245110,1614,4082,208,2234,16
+"TRIM22"," TRIM22","ENSG00000132274",10346,"protein_coding","Human","11",5.68961,"Tripartite motif containing 22 ",38.59,18,47480,737,1934,81,628,6
+"UBE2L6"," UBE2L6","ENSG00000156587",9246,"protein_coding","Human","11",57.551656,"Ubiquitin conjugating enzyme E2 L6 ",48.66,5,16629,307,1034,162,699,4
+"MS4A7"," MS4A7","ENSG00000166927",58475,"protein_coding","Human","11",60.378485,"Membrane spanning 4-domains A7 ",40.71,12,17467,484,1335,76,1283,5
+"CASP1"," CASP1","ENSG00000137752",834,"protein_coding","Human","11",105.025397,"Caspase 1 ",37.02,22,9854,863,1573,65,356,8
+"STAT2"," STAT2","ENSG00000170581",6773,"protein_coding","Human","12",56.341597,"Signal transducer and activator of transcription 2 ",47.82,42,18607,933,4017,39,357,20
+"HSP90B1"," HSP90B1","ENSG00000166598",7184,"protein_coding","Human","12",103.930107,"Heat shock protein 90 beta family member 1 ",39.87,35,23825,823,2802,129,177,16
+"OAS2"," OAS2","ENSG00000111335",4939,"protein_coding","Human","12",112.978395,"2'-5'-oligoadenylate synthetase 2 ",43.81,15,33329,1260,3675,80,1104,9
+"EPSTI1"," EPSTI1","ENSG00000133106",94240,"protein_coding","Human","13",42.886388,"Epithelial stromal interaction 1 ",39.57,10,105884,578,1479,74,1112,10
+"PHF11"," PHF11","ENSG00000136147",51131,"protein_coding","Human","13",49.49561,"PHD finger protein 11 ",41.72,18,33372,668,1083,85,308,8
+"NPC2"," NPC2","ENSG00000119655",10577,"protein_coding","Human","14",74.476192,"NPC intracellular cholesterol transporter 2 ",43.65,9,17986,448,835,38,407,5
+"TMEM87A"," TMEM87A","ENSG00000103978",25963,"protein_coding","Human","15",42.210447,"Transmembrane protein 87A ",38.89,15,63088,466,1699,64,433,15
+"LYSMD2"," LYSMD2","ENSG00000140280",256586,"protein_coding","Human","15",51.723011,"LysM domain containing 2 ",41.49,4,28575,431,1076,179,466,3
+"LACTB"," LACTB","ENSG00000103642",114294,"protein_coding","Human","15",63.121833,"Lactamase beta ",39.93,4,20229,1048,1668,46,1036,5
+"RAB11A"," RAB11A","ENSG00000103769",8766,"protein_coding","Human","15",65.726054,"RAB11A, member RAS oncogene family ",40.1,9,165936,466,1386,103,1364,4
+"NPTN"," NPTN","ENSG00000156642",27020,"protein_coding","Human","15",73.560014,"Neuroplastin ",41.2,10,74121,848,1411,210,325,7
+"ARHGAP17"," ARHGAP17","ENSG00000140750",55114,"protein_coding","Human","16",24.919389,"Rho GTPase activating protein 17 ",44.36,20,96278,736,1314,72,361,10
+"ADAP2"," ADAP2","ENSG00000184060",55803,"protein_coding","Human","17",30.906344,"ArfGAP with dual PH domains 2 ",48.03,11,53602,536,1634,169,614,8
+"KCNJ2"," KCNJ2","ENSG00000123700",3759,"protein_coding","Human","17",70.168673,"Potassium inwardly rectifying channel subfamily J member 2 ",41.95,2,11372,1284,3538,197,3721,2
+"ANKRD12"," ANKRD12","ENSG00000101745",23253,"protein_coding","Human","18",9.136228,"Ankyrin repeat domain 12 ",37.33,9,149758,2335,3873,118,2088,9
+"ABHD3"," ABHD3","ENSG00000158201",171586,"protein_coding","Human","18",21.650901,"Abhydrolase domain containing 3, phospholipase ",42.44,10,53880,643,1439,150,399,6
+"ARK2N"," ARK2N","ENSG00000152242",147339,"protein_coding","Human","18",46.173553,"Arkadia (RNF111) N-terminal like PKA signaling regulator 2N ",40.58,6,93440,830,3280,161,2777,4
+"CNDP2"," CNDP2","ENSG00000133313",55748,"protein_coding","Human","18",74.495816,"Carnosine dipeptidase 2 ",51.18,29,27639,556,1157,100,1034,6
+"NUP62"," NUP62","ENSG00000213024",23636,"protein_coding","Human","19",49.906825,"Nucleoporin 62 ",54.29,28,22940,1274,2228,168,740,3
+"MAFB"," MAFB","ENSG00000204103",9935,"protein_coding","Human","20",40.685848,"MAF bZIP transcription factor B ",56.42,1,3389,972,3389,386,2031,1
+"ARHGAP17"," ARHGAP17","ENSG00000288353",55114,"protein_coding","Human","HG2471_PATCH",0.172872,"Rho GTPase activating protein 17 ",44.36,20,96278,736,1314,72,361,10
+"MICB"," MICB","ENSG00000224378",4277,"protein_coding","Human","HSCHR6_MHC_DBB_CTG1",2.745694,"MHC class I polypeptide-related sequence B ",49.54,3,13217,1088,2183,94,1215,5
+"MICB"," MICB","ENSG00000206449",4277,"protein_coding","Human","HSCHR6_MHC_QBL_CTG1",2.753986,"MHC class I polypeptide-related sequence B ",49.51,3,13017,1088,2176,94,1207,5
+"MICB"," MICB","ENSG00000227772",4277,"protein_coding","Human","HSCHR6_MHC_SSTO_CTG1",2.797381,"MHC class I polypeptide-related sequence B ",49.51,3,13030,1088,2187,94,1219,5
+"MICB"," MICB","ENSG00000231372",4277,"protein_coding","Human","HSCHR6_MHC_MANN_CTG1",2.810695,"MHC class I polypeptide-related sequence B ",54.32,3,5506,1018,1966,NA,1213,5
+"MICB"," MICB","ENSG00000231179",4277,"protein_coding","Human","HSCHR6_MHC_APD_CTG1",2.827449,"MHC class I polypeptide-related sequence B ",49.65,4,16226,1075,2266,84,1215,6
+"MICB"," MICB","ENSG00000238289",4277,"protein_coding","Human","HSCHR6_MHC_MCF_CTG1",2.84004,"MHC class I polypeptide-related sequence B ",49.43,3,13032,1088,2182,94,1213,5
+"MICB"," MICB","ENSG00000234218",4277,"protein_coding","Human","HSCHR6_MHC_COX_CTG1",2.975426,"MHC class I polypeptide-related sequence B ",49.45,3,13039,1088,2182,94,1213,5
+"TAP2"," TAP2","ENSG00000206299",6891,"protein_coding","Human","HSCHR6_MHC_QBL_CTG1",4.016121,"Transporter 2, ATP binding cassette subfamily B member ",43.89,5,16949,2044,4039,56,2464,11
+"TAP1"," TAP1","ENSG00000206297",6890,"protein_coding","Human","HSCHR6_MHC_QBL_CTG1",4.039497,"Transporter 1, ATP binding cassette subfamily B member ",50.43,3,8770,2427,2490,162,370,8
+"TAP2"," TAP2","ENSG00000223481",6891,"protein_coding","Human","HSCHR6_MHC_DBB_CTG1",4.065551,"Transporter 2, ATP binding cassette subfamily B member ",43.81,4,16798,2037,3316,53,1862,10
+"TAP1"," TAP1","ENSG00000224212",6890,"protein_coding","Human","HSCHR6_MHC_DBB_CTG1",4.088779,"Transporter 1, ATP binding cassette subfamily B member ",50.44,3,8770,2427,2490,162,370,8
+"TAP2"," TAP2","ENSG00000237599",6891,"protein_coding","Human","HSCHR6_MHC_MCF_CTG1",4.120921,"Transporter 2, ATP binding cassette subfamily B member ",43.86,5,16927,2044,4039,56,2464,11
+"TAP2"," TAP2","ENSG00000225967",6891,"protein_coding","Human","HSCHR6_MHC_APD_CTG1",4.126847,"Transporter 2, ATP binding cassette subfamily B member ",43.8,4,16797,2037,3316,53,1862,10
+"HLA-DMB"," HLA-DMB","ENSG00000241674",3109,"protein_coding","Human","HSCHR6_MHC_QBL_CTG1",4.128937,"Major histocompatibility complex, class II, DM beta ",45.03,8,18496,603,1370,200,347,4
+"TAP1"," TAP1","ENSG00000230705",6890,"protein_coding","Human","HSCHR6_MHC_MCF_CTG1",4.144278,"Transporter 1, ATP binding cassette subfamily B member ",50.44,3,8770,2427,2490,162,370,8
+"TAP1"," TAP1","ENSG00000227816",6890,"protein_coding","Human","HSCHR6_MHC_APD_CTG1",4.150074,"Transporter 1, ATP binding cassette subfamily B member ",50.44,3,8770,2427,2490,162,370,8
+"HLA-DMB"," HLA-DMB","ENSG00000226264",3109,"protein_coding","Human","HSCHR6_MHC_DBB_CTG1",4.178158,"Major histocompatibility complex, class II, DM beta ",45.02,8,18498,603,1370,200,347,4
+"TAP2"," TAP2","ENSG00000232326",6891,"protein_coding","Human","HSCHR6_MHC_SSTO_CTG1",4.221235,"Transporter 2, ATP binding cassette subfamily B member ",43.8,4,16796,2037,3318,53,1864,10
+"HLA-DMB"," HLA-DMB","ENSG00000242386",3109,"protein_coding","Human","HSCHR6_MHC_MCF_CTG1",4.233672,"Major histocompatibility complex, class II, DM beta ",45.03,8,18499,603,1370,200,347,4
+"TAP2"," TAP2","ENSG00000228582",6891,"protein_coding","Human","HSCHR6_MHC_COX_CTG1",4.234034,"Transporter 2, ATP binding cassette subfamily B member ",43.88,5,16946,2044,4039,56,2464,11
+"HLA-DMB"," HLA-DMB","ENSG00000242092",3109,"protein_coding","Human","HSCHR6_MHC_APD_CTG1",4.239474,"Major histocompatibility complex, class II, DM beta ",45,8,18499,603,1370,200,347,4
+"TAP2"," TAP2","ENSG00000206235",6891,"protein_coding","Human","HSCHR6_MHC_MANN_CTG1",4.241186,"Transporter 2, ATP binding cassette subfamily B member ",43.88,5,16949,2044,4039,56,2464,11
+"TAP1"," TAP1","ENSG00000224748",6890,"protein_coding","Human","HSCHR6_MHC_SSTO_CTG1",4.244461,"Transporter 1, ATP binding cassette subfamily B member ",50.46,3,8770,2427,2490,162,370,8
+"TAP1"," TAP1","ENSG00000232367",6890,"protein_coding","Human","HSCHR6_MHC_COX_CTG1",4.257408,"Transporter 1, ATP binding cassette subfamily B member ",50.44,3,8770,2427,2490,162,370,8
+"TAP1"," TAP1","ENSG00000226173",6890,"protein_coding","Human","HSCHR6_MHC_MANN_CTG1",4.264562,"Transporter 1, ATP binding cassette subfamily B member ",50.43,3,8770,2427,2490,162,370,8
+"HLA-DMB"," HLA-DMB","ENSG00000241296",3109,"protein_coding","Human","HSCHR6_MHC_SSTO_CTG1",4.333862,"Major histocompatibility complex, class II, DM beta ",45.01,8,18499,603,1370,200,347,4
+"HLA-DMB"," HLA-DMB","ENSG00000234154",3109,"protein_coding","Human","HSCHR6_MHC_COX_CTG1",4.346824,"Major histocompatibility complex, class II, DM beta ",45.01,8,18499,603,1370,200,347,4
+"HLA-DMB"," HLA-DMB","ENSG00000239329",3109,"protein_coding","Human","HSCHR6_MHC_MANN_CTG1",4.353997,"Major histocompatibility complex, class II, DM beta ",45,8,18495,603,1370,200,347,4
+"TLR7"," TLR7","ENSG00000196664",51284,"protein_coding","Human","X",12.867072,"Toll like receptor 7 ",40.25,2,23290,3150,3827,75,1703,3
+"DOCK11"," DOCK11","ENSG00000147251",139818,"protein_coding","Human","X",118.495815,"Dedicator of cytokinesis 11 ",39.7,4,190349,4468,4910,116,315,51
+"PGRMC1"," PGRMC1","ENSG00000101856",10857,"protein_coding","Human","X",119.236245,"Progesterone receptor membrane component 1 ",42.58,2,8222,526,1832,95,1212,3
+"FCGR1BP"," FCGR1BP","ENSG00000198019",NA,"transcribed_unprocessed_pseudogene","Human","1",121.087395,"Fc gamma receptor Ib, pseudogene ",41.94,1,8758,NA,1128,NA,NA,6
+"FCGR1CP"," FCGR1CP","ENSG00000265531",NA,"transcribed_unprocessed_pseudogene","Human","1",143.874793,"Fc gamma receptor Ic, pseudogene ",41.82,1,8783,NA,1127,NA,NA,6
