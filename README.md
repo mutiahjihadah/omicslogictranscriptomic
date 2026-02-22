@@ -1,2 +1,2 @@
-# omicslogictranscriptomic
-Documentary for my transcriptomic analysis training in Omicslogic Indonesia
+# omicslitetranscriptomic
+Documentary for my transcriptomic analysis training in Omicslite Indonesia
